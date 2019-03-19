@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gustos</title>
+    <link rel="icon" href="./img/bootstrap-icon.png">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+<!--    <link rel="stylesheet" type="text/css" href="css/style.css">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        *, body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+
+        }
+        .section {
+            width: 100%;
+/*            height: 100%;*/
+            margin: auto; 
+        }
+        .head {
+            background-image: url(./img/bg_shadow.png);
+            height: 900px;
+            width: 100%;
+        }
+        .logo {
+            font-family: 'Kaushan Script', cursive;
+            font-size: 30px;
+            color: #fff;
+            margin-left: 70px; 
+        }
+        .logo a {
+            color: #fff;
+        }
+        .header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70px;
+            background: rgba(86, 83, 76, .5);
+            padding: 0;
+            margin: 0;
+        }
+        ul {
+            display: flex;
+            margin: 0;
+        }
+        .header li {
+            margin-right: 40px;
+        }
+        li, a {
+            color: #fff;
+        }
+        li a, li {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        .soc img {
+            margin-right: 20px;
+        }
+        .header a:hover {
+            text-decoration: none;
+            color: #000;
+        }
+        /*==================Header_mid==========================*/
+        .header_mid h1 {
+            font-family: 'Playfair Display', serif;
+            color: #fff;
+            text-align: center;
+            font-size: 92px;
+            margin-top: 200px;
+        }
+        hr {
+            width: 200px;
+            text-align: center;
+            margin: auto;
+            border: 2px solid white;
+            opacity: .6;
+            margin-top: 40px;
+        }
+        .header_mid p {
+            color: #fff;
+            text-align: center;
+            font-size: 27px;
+            margin-top: 90px;
+            font-weight: 100;
+        }
+        .header_mid a {
+            text-decoration: none;
+            color: #fff;
+            padding: 20px 48px;
+            background: rgba(86, 83, 76, .6);
+            font-size: 14px;
+            text-align: center;
+            display: block;
+            width: 200px;
+            margin: auto;
+            margin-top: 70px;
+            border: 1px dashed grey;
+        }
+        .header_mid a:hover {
+            color: #000;
+        }
+        /*=======================sect1============================*/
+        .sect1 {
+            height: auto;
+            display: flex;
+            padding-top: 105px;
+        }
+        .post1 {
+            width: 50%;
+            text-align: center;
+            padding-left: 150px;
+        }
+        .post1 h1 {
+            color: #56534c;
+            font-size: 48px;
+        }
+        .art {
+            color: #a47d5e;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        .post {
+            color: #56534c;
+            font-size: 14px;
+        }
+        .post1 h3 {
+            font-size: 24px;
+            color: #56534c;
+            margin-top: 45px;
+        }
+        .bg {
+            margin: auto;
+            margin-top: 50px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+        }
+        .bg li {
+            display: block;
+            padding: 0 20px;
+        }
+        .bg img {
+            width: 100px;
+            height: 100px;
+        }
+        .bg h3 {
+            text-transform: none;
+            color: #56534c;
+        }
+        .uniq {
+            margin-top: 50px;
+            margin-bottom: 130px;
+            font-size: 24px;
+            color: #a47d5e;
+            text-align: center;
+            display: block;
+        }
+        /*======================post2=============================*/
+        .post2 {
+            width: 50%;
+            position: relative;
+        }
+        .p2post img {
+            margin-right: 10px;
+            padding-top: 10px;
+        }
+        .tastes {
+            background-image: url(./img/frame.png);
+            width: 280px;
+            height: 280px;
+            position: absolute;
+            top: 140px;
+            left: 160px;
+        }
+        .frame {
+            text-align: center;
+            margin: auto;
+            padding-top: 80px;
+            color: #c9b176;
+            font-size: 30px;
+        }
+        /*=======================panc=============================*/
+        .panc {
+            width: 100%;
+            height: 760px;
+            background-image: url(./img/bg2.png);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pancakes {
+            display: flex;
+        }
+        .img_info {
+            width: 550px;
+            height: 510px;
+            background: #fff;
+            padding: 60px;
+        }
+        .pancakes img {
+            display: block;
+        }
+        .img_info h3 {
+            color: #56534c;
+            font-size: 48px;
+        }
+        .st1 {
+            margin-top: 70px;
+        }
+        .img_menu li {
+            margin: 0 20px;
+            margin-top: 80px;
+        }
+        .ready {
+            width: 200px;
+            height: 200px;
+            background: #fff;
+            text-align: center;
+            position: absolute;
+            margin-left: 870px;
+            border: 1px solid rgba(0, 0, 0, .3);
+        }
+        .ready p {
+            line-height: 50px;
+            padding-top 10px;
+        }
+        /*=======================break============================*/
+        .break {
+            height: 760px;
+            background-image: url(./img/bg3.png);
+            display: flex;
+        }
+        .post_left {
+            width: 50%;
+            height: 760px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 300px;
+            /*    z-index: 100;*/
+            /*    background: #000;*/
+        }
+        .post_left h1 {
+            font-size: 60px;
+        }
+        .post_left .time {
+            text-transform: uppercase;
+            font-size: 18px;
+            color: #c8a593;
+        }
+        .m_s h3 {
+            font-size: 30px;
+        }
+        .m_s .op {
+            font-size: 16px;
+            color: #c2beba;
+        }
+        .m_s .price {
+            font-size: 30px;
+            color: #dfc691;
+            text-transform: uppercase;
+        }
+        /*==========================*/
+        .post_right {
+            width: 50%;
+            height: 760px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .morning {
+            width: 441px;
+            height: 600px;
+            background-image: url(./img/border.png);
+            text-align: center;
+        }
+        .m_top {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 55px;
+        }
+        .m_top p {
+            font-size: 14px;
+            color: #56534c;
+        }
+        .morning h1 {
+            font-size: 44px;
+            color: #56534c;
+            margin-top: 90px;
+        }
+        .morning p {
+            margin-top: 45px;
+            font-size: 14px;
+            color: #56534c;
+        }
+        .morning a {
+            color: #a47d5e;
+            display: block;
+            width: 190px;
+            margin: auto;
+            margin-top: 40px;
+            padding: 15px 70px;
+            border: 1px solid grey;
+        }
+        .morning a:hover {
+            text-decoration: none;
+            color: #56534c;
+        }
+        /*========================sand===========================*/
+        .sand {
+            background: #fff;
+            text-align: center;
+        }
+        .sand h1 {
+            font-size: 44px;
+            color: #56534c;
+            margin-top: 90px;
+        }
+        .sand p {
+            color: #a47d5e;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        .pre_menu {
+            display: flex;
+            justify-content: center;
+        }
+        .l_post {
+            width: 600px;
+            height: 500px;
+        }
+        .item:nth-child(2), .item:nth-child(3) {
+            margin-top: 55px;
+        }
+        .item h3 {
+            color: #a47d5e;
+            font-size: 30px;
+            margin-top: 10px;
+        }
+        .item p {
+            font-size: 14px;
+            color: #56534c;
+            text-transform: none;
+            margin-top: 10px;
+        }
+        /*====================================*/
+        .r_post {
+            width: 70%;
+            height: auto;
+        }
+        .ph {
+            width: 840px;
+            height: 556px;
+            background-image: url(./img/phbg.png);
+            margin-top: 95px;
+        }
+        .ph_item {
+            width: 200px;
+            height: 33.33333333333%;
+            background: rgba(255, 255, 255, .8);
+            line-height: 50px;
+            padding: 30px;
+            border-bottom: 1px solid rgba(0, 0, 0, .2);
+            margin-left: 640px;
+        }
+        .ph_item:nth-child(3) {
+            border-bottom: none;
+        }
+        .ph_item h3 {
+            font-size: 18px;
+            color: #a47d5e;
+            text-transform: uppercase;
+        }
+        .ph_item .ph1 {
+            font-size: 60px;
+            color: #56534c;
+            padding-top: 10px;
+        }
+        .ph_item .ph2 {
+            font-size: 18px;
+            color: #979285;
+            text-transform: none;
+        }
+        /*=========================footer=========================*/
+        .footer {
+            height: 140px;
+            margin-top: 80px;
+            margin-bottom: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav_foo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid #c2beba;
+            border-bottom: 1px solid #c2beba;
+            height: 70px;
+        }
+        .logo_foo {
+            font-family: 'Kaushan Script', cursive;
+            font-size: 30px;
+            color: #56534c;
+        }
+        .logo_foo:hover, .nav_foo a:hover {
+            text-decoration: none;
+            color: #a47d5e;
+        }
+        .nav_foo li, .nav_foo a {
+            color: #6d695f;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin: 10px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section head">
+        <div class="header">
+            <p><span class="logo"><a href="#">Gustoso</a></span></p>
+            <nav>
+                <ul>
+                    <li><a href="#" class="">welcome</a></li>
+                    <li>~</li>
+                    <li><a href="#" class="">menu</a></li>
+                    <li>~</li>
+                    <li><a href="#" class="">reservation</a></li>
+                    <li>~</li>
+                    <li><a href="#" class="">news</a></li>
+                    <li>~</li>
+                    <li><a href="#" class="">contact</a></li>
+                </ul>
+            </nav>
+            <div class="soc">
+                <a href="#"><img src="./img/logo---Twitter.png" alt="twitter"></a>
+                <a href="#"><img src="./img/logo---Facebook.png" alt="facebook"></a>
+                <a href="#"><img src="./img/logo---Instagram.png" alt=""></a>
+            </div>
+        </div>
+        <div class="header_mid">
+            <h1>Pastry with love</h1>
+            <hr>
+            <p>We’re bringing you fresh ingredients every
+                <br>day in ways you can’t resist</p> <a href="#">OUR MENU</a> </div>
+    </div>
+    <div class="section sect1">
+        <div class="post1">
+            <h1>Art of cakes</h1>
+            <p class="art">we create delicious memories</p>
+            <p class="post">Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+                <br>Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+                <br> Maecenas tempus, tellus eget condimentum rhoncus, sem quam
+                <br>semper libero, sit amet adipiscing sem neque sed.</p>
+            <h3>Chef Cook</h3>
+            <div class="bg">
+                <ul>
+                    <li>
+                        <h3>Benito</h3></li>
+                    <li><img src="./img/avatar.png" alt="benito"></li>
+                    <li>
+                        <h3>Gaspare</h3></li>
+                </ul>
+            </div>
+            <p class="uniq">Unique creations for unique
+                <br> occasions.</p>
+        </div>
+        <div class="post2">
+            <div class="p2post"> <img src="./img/left1.png" alt=""> <img src="./img/right1.png" alt=""> </div>
+            <div class="p2post"> <img src="./img/left2.png" alt=""> <img src="./img/right2.png" alt=""> </div>
+            <div class="tastes">
+                <p class="frame">TASTES SO
+                    <br>GOOD!</p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="section panc">
+        <div class="pancakes"> <img src="./img/img2.png" alt="">
+            <div class="img_info">
+                <h3>Tasty pancakes</h3>
+                <p class="art">season facorite</p>
+                <p class="post st1">Maecenas nec odio et ante tincidunt tempus. Donec vitae
+                    <br>sapien ut libero venenatis faucibus. Nullam quis ante.
+                    <br>Etiam sit amet orci eget eros faucibus.</p>
+                <ul class="img_menu">
+                    <li><img src="./img/m1.png" alt=""></li>
+                    <li><img src="./img/m2.png" alt=""></li>
+                    <li><img src="./img/m3.png" alt=""></li>
+                </ul>
+            </div>
+            <div class="ready">
+                <p class="art">ready in</p>
+                <p style="font-size: 92px; color: #dfc691;">40</p>
+                <p style="font-size: 18px; color: #979285;">mins</p>
+            </div>
+        </div>
+    </div>
+    <div class="section break">
+        <div class="post_left">
+            <h1>Breakfast</h1>
+            <p class="time">7am breakfast? we're open!</p>
+            <div class="m_s">
+                <h3>Full breakfast</h3>
+                <p class="op">Duis ut tortor, et risus, vulputate pretium</p>
+                <p class="price">$12.49</p>
+            </div>
+            <div class="m_s">
+                <h3>Toast & Jam</h3>
+                <p class="op">Suspendisse, tempus, nterdum</p>
+                <p class="price">$4.90</p>
+            </div>
+            <div class="m_s">
+                <h3>Muffins</h3>
+                <p class="op">Fusce eget dui sodales est</p>
+                <p class="price">$3.95</p>
+            </div>
+        </div>
+        <div class="post_right">
+            <div class="morning">
+                <div class="m_top">
+                    <p>EST.</p>
+                    <p>1893</p>
+                </div>
+                <h1>Your morning <br> Escape with Flair</h1>
+                <p>Donec vitae sapien ut libero venenatis faucibus.<br> Nullam quis ante. Etiam sit amet orci eget eros <br> faucibus tincidunt. Duis leo.</p>
+                <a href="#">READ</a>
+            </div>
+        </div>
+    </div>
+    <div class="section sand">
+        <h1>The Jibarito sandwich</h1>
+        <p>The best sandwich you’ve ever tasted</p>
+        <div class="pre_menu">
+            <div class="l_post">
+                <div class="item">
+                    <img src="./img/item1.png" alt="">
+                    <h3>Class aptent</h3>
+                    <p>Quot alienum persecuti ut eam, nam ad
+    <br> atqui primis nusquam.</p>
+                </div>
+                <div class="item">
+                    <img src="./img/item2.png" alt="">
+                    <h3>Class aptent</h3>
+                    <p>Quot alienum persecuti ut eam, nam ad
+    <br> atqui primis nusquam.</p>
+                </div>
+                <div class="item">
+                    <img src="./img/item3.png" alt="">
+                    <h3>Class aptent</h3>
+                    <p>Quot alienum persecuti ut eam, nam ad
+    <br> atqui primis nusquam.</p>
+                </div>
+            </div>
+            <div class="r_post">
+                <div class="ph">
+                    <div class="ph_item">
+                        <h3>prep</h3>
+                        <p class="ph1">15</p>
+                        <p class="ph2">mins</p>
+                    </div>
+                    <div class="ph_item">
+                        <h3>cook</h3>
+                        <p class="ph1">35</p>
+                        <p class="ph2">mins</p>
+                    </div>
+                    <div class="ph_item">
+                        <h3>Ready in</h3>
+                        <p class="ph1" style="font-size: 92px; color: #dfc691;">50</p>
+                        <p class="ph2">mins</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section footer">
+        <ul class="nav_foo">
+            <li><a href="#">our menu</a></li>
+            <li>~</li>
+            <li><a href="#">gallery</a></li>
+            <li>~</li>
+            <li><a href="#">culture</a></li>
+        </ul>
+        <a class="logo_foo" href="#">Gustoso</a>
+        <ul class="nav_foo">
+            <li><a href="#">events</a></li>
+            <li>~</li>
+            <li><a href="#">catering</a></li>
+            <li>~</li>
+            <li><a href="#">visit us</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
