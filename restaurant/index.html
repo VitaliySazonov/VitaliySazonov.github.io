@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Moon</title>
+        <link rel="icon" href="img/night-coffee.png">
+<!--        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="icons/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+        <link rel="stylesheet" type="text/css" href="icons/ionicons-2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+        <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="js/socket.io.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+
+    <body>
+        <div class="full">
+            <div class="logo"><a href="#"><div class="logo_shine"></div></a></div>
+            <div class="title"><p>M O O N <span style="color: #fff">C A F E</span></p></div>
+            <div class="call"><span class="message">Заказать столик по тел.:<br>+38 (067) 321-13-25</span><span class="anim"></span><a href="#call"><img src="img/phone.png" alt=""></a></div>
+            <nav>
+                <ul class="menu">
+                    <li class="menu_item"><a href="#menu"></a><span class="span" style="right: -6%">Кухня</span></li>
+                    <li class="menu_item"><a href="#bar"></a><span class="span" style="right: 6%">Бар</span></li>
+                    <li class="menu_item"><a href="#location"></a><span class="span" style="right: -70%">Расположение ресторана</span></li>
+                    <li><div class="menu_button"><span></span></div></li>
+                </ul>
+            </nav>
+
+            <section class="main block main_kitchen" data-target="menu">
+                <ul class="top_memu">
+                    <li class="item active"><a href="#pizza"></a><span>Пицца</span></li>
+                    <li class="item"><a href="#sup"></a><span>Суп</span></li>
+                    <li class="item"><a href="#salad"></a><span>Салаты</span></li>
+                    <li class="item"><a href="#pasta"></a><span>Паста</span></li>
+                    <li class="item"><a href="#meat"></a><span>Мясо</span></li>
+                    <li class="item"><a href="#blin"></a><span>Блины</span></li>
+                    <li class="item"><a href="#seafood"></a><span>Морепродукты</span></li>
+                    <li class="item"><a href="#desert"></a><span>Десерты</span></li>
+                    <li class="item"><a href="#bread"></a><span>Хлеб</span></li>
+                    <li class="item"><a href="#bl"></a><span>Бизнес ланч</span></li>
+                </ul>
+                <div class="all" data-target="pizza">
+                    <h2>Пицца</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/pizza/4s.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>4 СЫРА</h3>
+                                    <p>Сыр скаморца, моцарелла, рикотта, горгонзола, сливочный соус</p>
+                                    <div class="price"><span>175 грн.</span><p>500 г.</p></div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/pizza/margarita.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>БОСКАЙОЛА</h3>
+                                    <p>Мини-салями, шампиньоны, моцарелла, черри, руккола, трюфельное масло, сливочный соус</p>
+                                    <div class="price"><span>175 грн.</span><p>500 г.</p></div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/pizza/prt.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <p>Выход: </p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/pizza/bos.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>БОСКАЙОЛА</h3>
+                                    <p>Мини-салями, шампиньоны, моцарелла, черри, руккола, трюфельное масло, сливочный соус</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/pizza/mela.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/pizza/pr.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/pizza/dia.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/pizza/pollo.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/pizza/fungi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/pizza/pp.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="sup"><h2>Супы</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="salad"><h2>Салаты</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="pasta"><h2>Паста</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="meat"><h2>Мясо</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="blin"><h2>Блины</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="seafood"><h2>Морепродукты</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="desert"><h2>Десерты</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="bread"><h2>Хлеб</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="bl"><h2>Бизнес-ланч</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main main_bar" data-target="bar">
+                <ul class="top_memu">
+                    <li class="item_bar active"><a href="#shampagn"></a><span>Шампанское</span></li>
+                    <li class="item_bar"><a href="#whine"></a><span>Вино</span></li>
+                    <li class="item_bar"><a href="#tequila"></a><span>Текила</span></li>
+                    <li class="item_bar"><a href="#coctail"></a><span>Коктейли</span></li>
+                    <li class="item_bar"><a href="#vodka"></a><span>Водка</span></li>
+                    <li class="item_bar"><a href="#whiskey"></a><span>Виски</span></li>
+                    <li class="item_bar"><a href="#rom"></a><span>Ром</span></li>
+                    <li class="item_bar"><a href="#cognac"></a><span>Коньяк</span></li>
+                    <li class="item_bar"><a href="#brandy"></a><span>Бренди</span></li>
+                    <li class="item_bar"><a href="#beer"></a><span>Пиво</span></li>
+                    <li class="item_bar"><a href="#juice"></a><span>Соки</span></li>
+                    <li class="item_bar"><a href="#coffee"></a><span>Кофе</span></li>
+                    <li class="item_bar"><a href="#tea"></a><span>Чай</span></li>
+                </ul>
+                <div class="all" data-target="shampagn">
+                    <h2>Шампанское</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/pizza/4s.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>4 СЫРА</h3>
+                                    <p>Сыр скаморца, моцарелла, рикотта, горгонзола, сливочный соус</p>
+                                    <div class="price"><span>175 грн.</span><p>500 г.</p></div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/pizza/margarita.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>БОСКАЙОЛА</h3>
+                                    <p>Мини-салями, шампиньоны, моцарелла, черри, руккола, трюфельное масло, сливочный соус</p>
+                                    <div class="price"><span>175 грн.</span><p>500 г.</p></div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/pizza/prt.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <p>Выход: </p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/pizza/bos.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>БОСКАЙОЛА</h3>
+                                    <p>Мини-салями, шампиньоны, моцарелла, черри, руккола, трюфельное масло, сливочный соус</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/pizza/mela.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/pizza/pr.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/pizza/dia.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/pizza/pollo.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/pizza/fungi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/pizza/pp.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="whine"><h2>Карта вин</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="tequila"><h2>Текила</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="coctail"><h2>Коктейли</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="vodka"><h2>Водка</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="whiskey"><h2>Виски</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="rom"><h2>Ром</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="cognac"><h2>Коньяк</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="brandy"><h2>Бренди</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="beer"><h2>Пиво</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="juice"><h2>Соки</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="coffee"><h2>Кофе</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="all" data-target="tea"><h2>Чай</h2>
+                    <div class="goods row"> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/che.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/for.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/spinat.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/grib.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/kolbasa.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div> 
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/gribi.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/midii.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <figure class="goods_item"><img src="img/soup/ka4.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                            <figure class="goods_item"><img src="img/soup/min.jpg" alt="sample85"/>
+                                <figcaption>
+                                    <h3>Pudol Doux</h3>
+                                    <p>All this modern technology just makes people try to do everything at once.</p>
+                                    <div class="price">190 грн.</div>
+                                </figcaption><a href="#"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main main_reserv" data-target="reserv">
+                <div class="all center_reserv">
+                  <h2>Бронь столов</h2>
+                  <div class="reserv">
+                     <div class="reserv_table">
+                         <h3>Стол - 1</h3>
+                         <div class="reserv_time">
+                             <p>Стол забронирован на:</p>
+                             <p>Вт. 23.10 - 21 00</p>
+                             <p>Ср. 23.10 - 21 00</p>
+                             <p>Чт. 23.10 - 21 00</p>
+                             <p>Пт. 23.10 - 21 00</p>
+                         </div>
+                     </div>
+                     <div class="reserv_kalendar"></div>
+                      
+                  </div>
+                   <div class="stol">
+                       <img src="img/plan.png" alt="">
+                       <span style="width: 6.5%; height: 8%; top: 8.5%; left: 2%">1</span>
+                       <span style="width: 6.5%; height: 8%; top: 24%; left: 2%">2</span>
+                       <span style="width: 4%; height: 15%; top: 9%; left: 14%">3</span>
+                       <span style="width: 4%; height: 15%; top: 9%; left: 24%">4</span>
+                       <span style="width: 2.8%; height: 6%; top: 40%; left: 5%">5</span>
+                       <span style="width: 2.8%; height: 6%; top: 32.5%; left: 12.5%">6</span>
+                       <span style="width: 2.8%; height: 6%; top: 32.5%; left: 19.3%">7</span>
+                       <span style="width: 6%; height: 8%; top: 36%; left: 24.5%">8</span>
+                       <span style="width: 6.2%; height: 8%; top: 61.5%; left: 2%">9</span>
+                       <span style="width: 6.2%; height: 8%; top: 81%; left: 2%">10</span>
+                       <span style="width: 2.8%; height: 6%; top: 61.5%; left: 11.8%">11</span>
+                       <span style="width: 2.8%; height: 6%; top: 72.5%; left: 11.8%">12</span>
+                       <span style="width: 2.8%; height: 6%; top: 83%; left: 11.8%">13</span>
+                       <span style="width: 2.8%; height: 6%; top: 54.8%; left: 26.5%">14</span>
+                       <span style="width: 5.3%; height: 10.4%; top: 77.8%; left: 36.3%; border-radius: 60% 90% 60% 40%">15</span>
+                       <span style="width: 5.3%; height: 10.4%; top: 77.8%; left: 48.9%; border-radius: 60% 90% 60% 40%">16</span>
+                       <span style="width: 5.3%; height: 10.4%; top: 77.8%; left: 61.2%; border-radius: 60% 90% 60% 40%">17</span>
+                       <span style="width: 2.6%; height: 15%; top: 79%; left: 76.2%">18</span>
+                       <span style="width: 2.6%; height: 25%; top: 69%; left: 84.3%">19</span>
+                       <span style="width: 2.6%; height: 29%; top: 65%; left: 92.3%">20</span>
+                       
+                   </div>
+                    
+                </div>
+            </section>
+            <section class="main main_location" data-target="location">
+                <div class="all center_location">
+                   <h2>Расположение ресторана</h2>
+                    <p>г. Днепропетровск <br> пр-кт Дмитра яворницького 103а (Карла Маркса 103а)</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.151658883379!2d35.026716200931794!3d48.47280453680601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2f9f0c0eddd%3A0x85b3e2f3b53e7f2c!2z0L_RgNC-0YHQv9C10LrRgiDQlNC80LjRgtGA0LjRjyDQr9Cy0L7RgNC90LjRhtC60L7Qs9C-LCAxMDMsINCU0L3QuNC_0YDQviwg0JTQvdC10L_RgNC-0L_QtdGC0YDQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDQ5MDAw!5e0!3m2!1sru!2sua!4v1539564113361" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

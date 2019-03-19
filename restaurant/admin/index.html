@@ -1,0 +1,818 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../img/night-coffee.png">
+    <link rel="stylesheet" href="css/bootstrap-timepicker.min.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="icons/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="../js/socket.io.js"></script>
+    <script src="js/bootstrap-timepicker.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>Admin</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="head">
+            <div class="workers">
+                <ul>
+                    <li class="worker" data-id="0">
+                        <div class="worker_avatar admin online"><img src="http://0.gravatar.com/avatar/fa4df8540bab3cb38f7dfa60c6e0522c?size=2000" alt=""></div>
+                        <div class="anim"></div>
+                        <div class="worker_content">
+                            <p class="worker_name">Виталик Сазонов</p>
+                            <p class="worker_position">Управляющий</p>
+                        </div>
+                    </li>
+                    
+                    <li class="worker_contact" data-id="0">
+                        <span>Тел:</span><p>063 23 48 124</p>
+                        <span>Адр:</span><p>пр-кт Карла Маркса 103а</p>
+                    </li>
+                    <li class="src">
+                        <a class="ion-search team_search" href="#"></a>
+                        <div class="worker_content">
+                            <h2>Команда</h2>
+<!--                            <span>15 человек</span>-->
+                        </div>
+                    </li>
+                    <ul id="workers_panel">
+<!--
+                        <li class="worker" data-id="2">
+                            <div class="worker_avatar online"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample1.jpg" alt=""></div>
+                            <div class="worker_content">
+                                <p class="worker_name">Ursula Gurnmeister</p>
+                                <p class="worker_position">Официант(ка)</p>
+                            </div>
+                        </li>
+                        <li class="worker_contact" data-id="2">
+                            <span>Тел:</span><p>063 23 48 124</p>
+                            <span>Адр:</span><p>пр-кт Карла Маркса 103а</p>
+                        </li>
+-->
+                    </ul>
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+        <nav class="menu">
+                <ul class="main_menu">
+                    <li class="item active"><i class="ion-ios-arrow-left"></i><a href="#stat"><p class="ion-stats-bars ico"></p></a></li>
+                    <li class="item"><i class="ion-ios-arrow-left"></i><a href="#goods"><p class="ion-bag ico"></p></a><span>1203</span></li>
+                    <li class="item"><i class="ion-ios-arrow-left"></i><a href="#team"><p class="ion-android-contacts ico"></p></a><span>564</span></li>
+                    <li class="item"><i class="ion-ios-arrow-left"></i><a href="#grafik"><p class="ion-calendar ico"></p></a><span></span></li>
+                </ul>
+            </nav>
+        <div class="panel home">
+            <div class="panel_middle">
+                <h1>Стена</h1>
+                <ul class="panel_top_left">
+                    <li><a href="#" class="active">День</a></li>
+                    <li><a href="#">Неделя</a></li>
+                    <li><a href="#">Месяц</a></li>
+                    <li><a href="#">Год</a></li>
+                    <li><a href="#"><i class="ion-calendar"></i>Пт. Сентябрь 14.2018</a></li>
+                </ul>
+                <ul class="panel_middle_stat">
+                     <li class="stat_item">
+                         <i class="ion-social-usd" style="color: greenyellow"></i><p>Доход<br><span>25 232 грн.</span></p>
+                     </li>
+                     <li class="stat_item">
+                         <i class="ion-cash" style="color: darkorange"></i><p>Чеки / Средний чек<br><span>88 / 780 грн.</span></p>
+                     </li>
+                      <li class="stat_item">
+                          <i class="ion-android-contacts" style="color: rebeccapurple"></i><p>Команда<br><span>добавить / уволить</span></p>
+                      </li>
+                   
+               </ul>
+                <div class="panel_second">
+                    <div class="panel_second_head">
+                        <h2>Топ продаж</h2><p>Кол-во</p><span>Всего</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <img src="../img/pizza/4s.jpg" alt="">
+                            <div>
+                                <span><img src="../menu/img/pizza/pizza.png" alt="">4 Сыра</span>
+                                <p>145 грн.</p>
+                            </div>
+                            <span>132</span>
+                            <p>2200 грн.</p>
+                        </li>
+                        <li>
+                            <img src="../img/pizza/4s.jpg" alt="">
+                            <div>
+                                <span><img src="../menu/img/pizza/pizza.png" alt="">4 Сыра</span>
+                                <p>145 грн.</p>
+                            </div>
+                            <span>132</span>
+                            <p>2200 грн.</p>
+                        </li>
+                        <li>
+                            <img src="../img/pizza/4s.jpg" alt="">
+                            <div>
+                                <span><img src="../menu/img/pizza/pizza.png" alt="">4 Сыра</span>
+                                <p>145 грн.</p>
+                            </div>
+                            <span>132</span>
+                            <p>2200 грн.</p>
+                        </li>
+                        <li>
+                            <img src="../img/pizza/4s.jpg" alt="">
+                            <div>
+                                <span><img src="../menu/img/pizza/pizza.png" alt="">4 Сыра</span>
+                                <p>145 грн.</p>
+                            </div>
+                            <span>132</span>
+                            <p>2200 грн.</p>
+                        </li>
+                        <li>
+                            <img src="../img/soup/grib.jpg" alt="">
+                            <div>
+                                <span><img src="../menu/img/soup/soup.png" alt="">Крем-суп из чечевицы</span>
+                                <p>85 грн.</p>
+                            </div>
+                            <span>132</span>
+                            <p>1460 грн.</p>
+                        </li>
+                        <li>
+                            <img src="../img/pasta/bol.jpg" alt="">
+                            <div>
+                                <span><img src="../menu/img/pasta/pasta.png" alt="">Болоньезе</span>
+                                <p>135 грн.</p>
+                            </div>
+                            <span>52</span>
+                            <p>1250 грн.</p>
+                        </li>
+                        <li>
+                            <img src="../img/desert/tiram.png" alt="">
+                            <div>
+                                <span><img src="../menu/img/desert/desert.png" alt="">Тирамису</span>
+                                <p>110 грн.</p>
+                            </div>
+                            <span>232</span>
+                            <p>4200 грн.</p>
+                        </li>
+                        <li>
+                            <img src="../img/salad/caprese6.jpg" alt="">
+                            <div>
+                                <span><img src="../menu/img/salad/salad.png" alt="">Капрезе</span>
+                                <p>105 грн.</p>
+                            </div>
+                            <span>121</span>
+                            <p>2155 грн.</p>
+                        </li>
+                        <li>
+                            <img src="../img/pizza/bos.jpg" alt="">
+                            <div>
+                                <span><img src="../menu/img/pizza/pizza.png" alt="">Боскайола</span>
+                                <p>185 грн.</p>
+                            </div>
+                            <span>88</span>
+                            <p>16280 грн.</p>
+                        </li>
+                        <li>
+                            <img src="../img/pasta/bol.jpg" alt="">
+                            <div>
+                                <span><img src="../menu/img/pasta/pasta.png" alt="">Болоньезе</span>
+                                <p>135 грн.</p>
+                            </div>
+                            <span>52</span>
+                            <p>1250 грн.</p>
+                        </li>
+                        <li>
+                            <img src="../img/desert/tiram.png" alt="">
+                            <div>
+                                <span><img src="../menu/img/desert/desert.png" alt="">Тирамису</span>
+                                <p>110 грн.</p>
+                            </div>
+                            <span>232</span>
+                            <p>4200 грн.</p>
+                        </li>
+                        <li>
+                            <img src="../img/salad/caprese6.jpg" alt="">
+                            <div>
+                                <span><img src="../menu/img/salad/salad.png" alt="">Капрезе</span>
+                                <p>105 грн.</p>
+                            </div>
+                            <span>121</span>
+                            <p>2155 грн.</p>
+                        </li>
+                        <li>
+                            <img src="../img/pasta/bol.jpg" alt="">
+                            <div>
+                                <span><img src="../menu/img/pasta/pasta.png" alt="">Болоньезе</span>
+                                <p>135 грн.</p>
+                            </div>
+                            <span>52</span>
+                            <p>1250 грн.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div></div>
+            <ul class="right_area">
+                <li class="stat active item_stat" data-item="stat">
+                    <ul class="skills stat_kichen">	
+                        <h2>Топ продаж (кухня)</h2>
+                        <li>
+                            <img src="../menu/img/pizza/pizza.png" alt="">
+                            <h3>Пицца</h3>
+                            <div class="bar-container">
+                                <span class="bar">
+                                    <span class="pct">100%</span>
+                                </span>
+                            </div>
+                            <p>221</p>
+                        </li>
+                        <li>
+                            <img src="../menu/img/soup/soup.png" alt="">
+                            <h3>Суп</h3>
+                            <div class="bar-container">
+                                <span class="bar">
+                                    <span class="pct">89%</span>
+                                </span>
+                            </div>
+                            <p>221</p>
+                        </li>
+                        <li>
+                            <img src="../menu/img/salad/salad.png" alt="">
+                            <h3>Салаты</h3>
+                            <div class="bar-container">
+                                <span class="bar">
+                                    <span class="pct">79%</span>
+                                </span>
+                            </div>
+                            <p>191</p>
+                        </li><li>
+                        <img src="../menu/img/pasta/pasta.png" alt="">
+                        <h3>Паста</h3>
+                        <div class="bar-container">
+                            <span class="bar">
+                                <span class="pct">73%</span>
+                            </span>
+                        </div>
+                        <p>181</p>
+                        </li><li>
+                        <img src="../menu/img/meat/meat.png" alt="">
+                        <h3>Мяса</h3>
+                        <div class="bar-container">
+                            <span class="bar">
+                                <span class="pct">70%</span>
+                            </span>
+                        </div>
+                        <p>171</p>
+                        </li><li>
+                        <img src="../menu/img/blin/blin.png" alt="">
+                        <h3>Блины</h3>
+                        <div class="bar-container">
+                            <span class="bar">
+                                <span class="pct">66%</span>
+                            </span>
+                        </div>
+                        <p>161</p>
+                        </li><li>
+                        <img src="../menu/img/seafood/seafood.png" alt="">
+                        <h3>Морепродукты</h3>
+                        <div class="bar-container">
+                            <span class="bar">
+                                <span class="pct">61%</span>
+                            </span>
+                        </div>
+                        <p>140</p>
+                        </li><li>
+                        <img src="../menu/img/desert/desert.png" alt="">
+                        <h3>Десерты</h3>
+                        <div class="bar-container">
+                            <span class="bar">
+                                <span class="pct">56%</span>
+                            </span>
+                        </div>
+                        <p>130</p>
+                        </li><li>
+                        <img src="../menu/img/bread/bread.png" alt="">
+                        <h3>Хлеб</h3>
+                        <div class="bar-container">
+                            <span class="bar">
+                                <span class="pct">14%</span>
+                            </span>
+                        </div>
+                        <p>80</p>
+                        </li>
+                        <li>
+                            <img src="../menu/img/bl/bl.png" alt="">
+                            <h3>Бизнес ланч</h3>
+                            <div class="bar-container">
+                                <span class="bar">
+                                    <span class="pct">50%</span>
+                                </span>
+                            </div>
+                            <p>120</p>
+                        </li>
+                    </ul>
+                    <ul class="skills stat_bar">	
+                        <h2>Топ продаж (бар)</h2>
+                        <li>
+                            <img src="../img/bar/beer.png" alt="">
+                            <h3>Пиво</h3>
+                            <div class="bar-container">
+                                <span class="bar">
+                                    <span class="pct">100%</span>
+                                </span>
+                            </div>
+                            <p>221</p>
+                        </li>
+                        <li>
+                            <img src="../img/bar/brandy.png" alt="">
+                            <h3>Бренди</h3>
+                            <div class="bar-container">
+                                <span class="bar">
+                                    <span class="pct">79%</span>
+                                </span>
+                            </div>
+                            <p>190</p>
+                        </li>
+                        <li>
+                            <img src="../img/bar/sp.png" alt="">
+                            <h3>Шампанское</h3>
+                            <div class="bar-container">
+                                <span class="bar">
+                                    <span class="pct">73%</span>
+                                </span>
+                            </div>
+                            <p>180</p>
+                        </li>
+                        <li>
+                            <img src="../menu/img/cocktail.png" alt="">
+                            <h3>Коктейль</h3>
+                            <div class="bar-container">
+                                <span class="bar">
+                                    <span class="pct">69%</span>
+                                </span>
+                            </div>
+                            <p>170</p>
+                        </li>
+                        <li>
+                            <img src="../menu/img/coffee.png" alt="">
+                            <h3>Кофе</h3>
+                            <div class="bar-container">
+                                <span class="bar">
+                                    <span class="pct">64%</span>
+                                </span>
+                            </div>
+                            <p>160</p>
+                        </li>
+                        <li>
+                            <img src="../menu/img/tea.png" alt="">
+                            <h3>Чай</h3>
+                            <div class="bar-container">
+                                <span class="bar">
+                                    <span class="pct">60%</span>
+                                </span>
+                            </div>
+                            <p>150</p>
+                        </li>
+                        <li>
+                            <img src="../menu/img/juice.png" alt="">
+                            <h3>Сок</h3>
+                            <div class="bar-container">
+                                <span class="bar">
+                                    <span class="pct">56%</span>
+                                </span>
+                            </div>
+                            <p>135</p>
+                        </li>
+                        <li>
+                            <img src="../menu/img/wine2.png" alt="">
+                            <h3>Вино</h3>
+                            <div class="bar-container">
+                                <span class="bar">
+                                    <span class="pct">50%</span>
+                                </span>
+                            </div>
+                            <p>125</p>
+                        </li>
+                        <li>
+                            <img src="../menu/img/vod.png" alt="">
+                            <h3>Водка</h3>
+                            <div class="bar-container">
+                                <span class="bar">
+                                    <span class="pct">46%</span>
+                                </span>
+                            </div>
+                            <p>115</p>
+                        </li>
+                        <li>
+                            <img src="../img/bar/beer.png" alt="">
+                            <h3>Пиво</h3>
+                            <div class="bar-container">
+                                <span class="bar">
+                                    <span class="pct">100%</span>
+                                </span>
+                            </div>
+                            <p>221</p>
+                        </li>
+                        <li>
+                            <img src="../img/bar/brandy.png" alt="">
+                            <h3>Бренди</h3>
+                            <div class="bar-container">
+                                <span class="bar">
+                                    <span class="pct">79%</span>
+                                </span>
+                            </div>
+                            <p>190</p>
+                        </li>
+                        <li>
+                            <img src="../img/bar/sp.png" alt="">
+                            <h3>Шампанское</h3>
+                            <div class="bar-container">
+                                <span class="bar">
+                                    <span class="pct">73%</span>
+                                </span>
+                            </div>
+                            <p>180</p>
+                        </li>
+                        <li>
+                            <img src="../menu/img/cocktail.png" alt="">
+                            <h3>Коктейль</h3>
+                            <div class="bar-container">
+                                <span class="bar">
+                                    <span class="pct">69%</span>
+                                </span>
+                            </div>
+                            <p>170</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="stat item_goods" data-item="goods">
+                   <ul class="add_goods">
+                       <li class="add_item">
+                           <p class="ion-plus" data-add="add_tov"> Добавить товар</p>
+                           <p class="ion-plus" data-add="add_cat"> Добавить категорию</p>
+                        </li>
+                       <li action="/registr" method="post" class="add_tov tov_item">
+                           <div class="select_cat">
+                               <div class="cat_result"><img class="img_result" src="" alt=""><input class="name_result" type="text" placeholder="Категория"></div>
+                               <ul class="cat_list">
+                                   <li class="cat_item"><img src="../menu/img/pizza/pizza.png" alt=""><p>Пицца</p></li>
+                                   <li class="cat_item"><img src="../menu/img/pasta/pasta.png" alt=""><p>Паста</p></li>
+                                   <li class="cat_item"><img src="../menu/img/soup/soup.png" alt=""><p>Суп</p></li>
+                               </ul>
+                           </div>
+                           <input class="tov_name" type="text" placeholder="Название">
+                           <div class="tov_images">
+                               <ul class="tov_images_all" id="list">
+<!--                                   <li class="tov_item"><img class="addddd" src="../menu/img/pizza/4s.jpg" alt=""><span class="ion-android-close delete_tov_image"></span></li>-->
+                                   <li class="ion-images add_tov_image" onclick="$('.upload_image').trigger( 'click' )">+</li>
+                                   <input class="upload_image" id="files" name="files[]" type='file' multiple/>
+                               </ul>
+                           </div>
+                           <ul class="tov_cont">
+                               <li><span>URL картинки:</span><p id="tov_img" contenteditable="true" placeholder="Обязательно..."></p></li>
+                               <li><span>Состав:</span><p id="sostav" contenteditable="true" placeholder="Обязательно..."></p></li>
+                               <li><span>Выход:</span><p id="vyhod" contenteditable="true" placeholder="Обязательно...(только цифры)"></p></li>
+                               <li><span>Время приготовления:</span><p id="time" contenteditable="true" placeholder="Обязательно...(только цыфры)"></p></li>
+                               <li><span>Стоимость:</span><p id="cost" contenteditable="true" placeholder="Обязательно...(только цыфры)"></p></li>
+                           </ul>
+                           <a type="submit" class="reg_good" href="#">Добавить сотрудника</a>
+                       </li>
+                       <li class="add_cat tov_item">
+                           <div class="image-upload-wrap ion-images"  onclick="$('.file-upload-input').trigger( 'click' )">
+                               <img class="file-upload-image " src="" alt=""/>
+                           </div>
+                           <input class="file-upload-input" type='file' onchange="readURL(this);"/>
+                           <input type="text" class="cat_name" placeholder="Название">
+                       </li>
+                    </ul>
+                    <div class="goods_head"><h1>Кухня</h1></div>
+                    <ul class="goods goods_kichen">
+                        <li class="goods_it">
+                            <div class="part" data-item="pizza"><img src="../menu/img/pizza/pizza.png" alt=""><p>Пицца</p></div>
+                            <ul class="part_list" data-id="pizza">
+                                <li class="goods_it_name" data-num="1"><p>Боскойола</p><div><i class="ion-compose edit"></i><i class="ion-android-close close"></i></div></li>
+                                <li class="content" data-cont="1">
+                                    <div class="part_img">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                    </div>
+                                    <ul class="part_cont">
+                                        <li>
+                                            <span>Состав:</span>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus odit eveniet officia quis fuga, earum eaque eos eius perferendis. Explicabo rerum praesentium repellendus quis magnam harum, veritatis aspernatur dolorem fuga!</p>
+                                        </li>
+                                        <li>
+                                            <span>Выход:</span>
+                                            <p>350 г.</p>
+                                        </li>
+                                        <li>
+                                            <span>Время приготовления:</span>
+                                            <p>20 мин.</p>
+                                        </li>
+                                        <li>
+                                            <span>Стоимость:</span>
+                                            <p>185 грн.</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="goods_it_name" data-num="2"><p>4 Сыра</p><div><i class="ion-compose edit"></i><i class="ion-android-close close"></i></div></li>
+                                <li class="content" data-cont="2">
+                                    <div class="part_img">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                    </div>
+                                    <ul class="part_cont">
+                                        <li>
+                                            <span>Состав:</span>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus odit eveniet officia quis fuga, earum eaque eos eius perferendis. Explicabo rerum praesentium repellendus quis magnam harum, veritatis aspernatur dolorem fuga!</p>
+                                        </li>
+                                        <li>
+                                            <span>Выход:</span>
+                                            <p>350 г.</p>
+                                        </li>
+                                        <li>
+                                            <span>Время приготовления:</span>
+                                            <p>20 мин.</p>
+                                        </li>
+                                        <li>
+                                            <span>Стоимость:</span>
+                                            <p>185 грн.</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="goods_it">
+                            <div class="part" data-item="soup"><img src="../menu/img/soup/soup.png" alt=""><p>Суп</p></div>
+                            <ul class="part_list" data-id="soup">
+                                <li class="goods_it_name" data-num="1"><p>Боскойола</p><div><i class="ion-compose edit"></i><i class="ion-android-close close"></i></div></li>
+                                <li class="content" data-cont="1">
+                                    <div class="part_img">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                    </div>
+                                    <ul class="part_cont">
+                                        <li>
+                                            <span>Состав:</span>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus odit eveniet officia quis fuga, earum eaque eos eius perferendis. Explicabo rerum praesentium repellendus quis magnam harum, veritatis aspernatur dolorem fuga!</p>
+                                        </li>
+                                        <li>
+                                            <span>Выход:</span>
+                                            <p>350 г.</p>
+                                        </li>
+                                        <li>
+                                            <span>Время приготовления:</span>
+                                            <p>20 мин.</p>
+                                        </li>
+                                        <li>
+                                            <span>Стоимость:</span>
+                                            <p>185 грн.</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="goods_it_name" data-num="2"><p>4 Сыра</p><div><i class="ion-compose edit"></i><i class="ion-android-close close"></i></div></li>
+                                <li class="content" data-cont="2">
+                                    <div class="part_img">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                    </div>
+                                    <ul class="part_cont">
+                                        <li>
+                                            <span>Состав:</span>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus odit eveniet officia quis fuga, earum eaque eos eius perferendis. Explicabo rerum praesentium repellendus quis magnam harum, veritatis aspernatur dolorem fuga!</p>
+                                        </li>
+                                        <li>
+                                            <span>Выход:</span>
+                                            <p>350 г.</p>
+                                        </li>
+                                        <li>
+                                            <span>Время приготовления:</span>
+                                            <p>20 мин.</p>
+                                        </li>
+                                        <li>
+                                            <span>Стоимость:</span>
+                                            <p>185 грн.</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="goods_it">
+                            <div class="part" data-item="pasta"><img src="../menu/img/pasta/pasta.png" alt=""><p>Паста</p></div>
+                            <ul class="part_list" data-id="pasta">
+                                <li class="goods_it_name" data-num="1"><p>Боскойола</p><div><i class="ion-compose edit"></i><i class="ion-android-close close"></i></div></li>
+                                <li class="content" data-cont="1">
+                                    <div class="part_img">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                    </div>
+                                    <ul class="part_cont">
+                                        <li>
+                                            <span>Состав:</span>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus odit eveniet officia quis fuga, earum eaque eos eius perferendis. Explicabo rerum praesentium repellendus quis magnam harum, veritatis aspernatur dolorem fuga!</p>
+                                        </li>
+                                        <li>
+                                            <span>Выход:</span>
+                                            <p>350 г.</p>
+                                        </li>
+                                        <li>
+                                            <span>Время приготовления:</span>
+                                            <p>20 мин.</p>
+                                        </li>
+                                        <li>
+                                            <span>Стоимость:</span>
+                                            <p>185 грн.</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="goods_it_name" data-num="2"><p>4 Сыра</p><div><i class="ion-compose edit"></i><i class="ion-android-close close"></i></div></li>
+                                <li class="content" data-cont="2">
+                                    <div class="part_img">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                        <img src="../img/pizza/bos.jpg" alt="">
+                                    </div>
+                                    <ul class="part_cont">
+                                        <li>
+                                            <span>Состав:</span>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus odit eveniet officia quis fuga, earum eaque eos eius perferendis. Explicabo rerum praesentium repellendus quis magnam harum, veritatis aspernatur dolorem fuga!</p>
+                                        </li>
+                                        <li>
+                                            <span>Выход:</span>
+                                            <p>350 г.</p>
+                                        </li>
+                                        <li>
+                                            <span>Время приготовления:</span>
+                                            <p>20 мин.</p>
+                                        </li>
+                                        <li>
+                                            <span>Стоимость:</span>
+                                            <p>185 грн.</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="goods_head"><h1>Бар</h1></div>
+                </li>
+                <li class="stat item_pages" data-item="pages"></li>
+                <li class="stat item_team" data-item="team">
+                    <div class="add_team_item">
+                      <p class="add_team_item_btn">+ Добавить сотрудника</p>
+                      <ul class="open_add">
+                          <li class="add_head">
+                              <div class="add_team_img">
+                                  <div class="img_wrap"  onclick="$('.member_input').trigger( 'click' )">
+                                      <img class="member_image " src="" alt=""/>
+                                  </div>
+                                  <input class="member_input" type='file' onchange="add_member(this);"/>
+                              </div>
+                            <div class="add_head_2">
+                                <p id="ai_name" class="ai_name" contenteditable="true" placeholder="Ф.И.О."></p>
+                                <p id="ai_pos" class="ai_pos" placeholder="+Должность"></p>
+                                <ul>
+                                    <li>Официант(ка)</li>
+                                    <li>Бармен</li>
+                                    <li>Повар (Гарячий)</li>
+                                    <li>Повар (Холодный)</li>
+                                </ul>
+                            </div>
+                              <a class="add_ok ion-checkmark" href="#" style="color: greenyellow"></a>
+                        </li>
+                          <li class="add_content"><span>Телефон:</span><p id="ai_tel" contenteditable="true" placeholder=">"></p>
+                          </li>
+                          
+                          <li class="add_content"><span>Адресс:</span><p id="ai_address" contenteditable="true" placeholder=">"></p>
+                          </li>
+                          <li class="add_content"><span>Паспорт:</span><p id="ai_passport" contenteditable="true" placeholder=">"></p>
+                          </li>
+                          <li class="add_content"><span>ИНН:</span><p id="ai_icod" contenteditable="true" placeholder=">"></p>
+                          </li>
+                          <li class="add_content"><span class="ion-social-whatsapp-outline"> Viber:</span><p id="ai_viber" contenteditable="true" placeholder=">"></p>
+                          </li>
+                          <li class="add_content"><span class="ion-paper-airplane"> Telegram:</span><p id="ai_telegram" contenteditable="true" placeholder=">"></p>
+                          </li>
+                          <li class="add_content"><span>Дата принятия на работу:</span><p id="ai_data" contenteditable="true" placeholder=">"></p>
+                          </li>
+                      </ul>
+                  </div>
+                    <ul id="member_list">
+                        <li class="team_ava " data-ava="1">
+                            <div class="ava">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample1.jpg" alt=""></div>
+                            <div class="team_name_work"><p>Анна Кумейко Борисовна</p><span>Официант(ка)</span></div>
+                            <div class="team_cont" data-ava-id="1">
+                                <div><p>Телефон:</p><span>086 632 65 32</span></div>
+                                <div><p>Адресс:</p><span>пр-кт K.M. 103</span></div>
+                                <div><p>Паспорт:</p><span>АН 59584556</span></div>
+                                <div><p>И. Код:</p><span>236465659897</span></div>
+                                <div><p class="ion-social-whatsapp-outline"> Viber:</p><span>063 852 23 56</span></div>
+                                <div><p class="ion-paper-airplane"> Telegram:</p><span>063 852 23 56</span></div>
+                                <div><p>Соц сети:</p><span><a href="#" class="ion-social-instagram-outline"></a><a href="" class="ion-social-youtube-outline"></a><a href="#" class="ion-social-facebook"></a><a href="#" class="ion-social-twitter"></a></span></div>
+                                <div><p>Дата принятия на работу:</p><span>20.08.2018</span></div>
+                                <a id="off" href="#">Уволить</a>
+                            </div>
+                        </li>
+                        <li class="team_ava" data-ava="2">
+                            <div class="ava"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample7.jpg" alt=""></div>
+                            <div><p>Сафронов Дмитрий Николаевич</p><span>Официант(ка)</span></div>
+                            <div class="team_cont" data-ava-id="2">
+                                <div><p>Телефон:</p><span>086 632 65 32</span></div>
+                                <div><p>Адресс:</p><span>пр-кт K.M. 103</span></div>
+                                <div><p>Паспорт:</p><span>АН 59584556</span></div>
+                                <div><p>И. Код:</p><span>236465659897</span></div>
+                                <div><p class="ion-social-whatsapp-outline"> Viber:</p><span>063 852 23 56</span></div>
+                                <div><p class="ion-paper-airplane"> Telegram:</p><span>063 852 23 56</span></div>
+                                <div><p>Соц сети:</p><span><a href="#" class="ion-social-instagram-outline"></a><a href="" class="ion-social-youtube-outline"></a><a href="#" class="ion-social-facebook"></a><a href="#" class="ion-social-twitter"></a></span></div>
+                                <div><p>Дата принятия на работу:</p><span>20.08.2018</span></div>
+                            </div>
+                        </li>
+                        
+                        <li class="team_ava " data-ava="3">
+                            <div class="ava"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample6.jpg" alt=""></div>
+                            <div><p>Варнава Екатерина Борисовна</p><span>Официант(ка)</span></div>
+                        
+                            <div class="team_cont" data-ava-id="3">
+                                <div><p>Телефон:</p><span>086 632 65 32</span></div>
+                                <div><p>Адресс:</p><span>пр-кт K.M. 103</span></div>
+                                <div><p>Паспорт:</p><span>АН 59584556</span></div>
+                                <div><p>И. Код:</p><span>236465659897</span></div>
+                                <div><p class="ion-social-whatsapp-outline"> Viber:</p><span>063 852 23 56</span></div>
+                                <div><p class="ion-paper-airplane"> Telegram:</p><span>063 852 23 56</span></div>
+                                <div><p>Соц сети:</p><span><a href="#" class="ion-social-instagram-outline"></a><a href="" class="ion-social-youtube-outline"></a><a href="#" class="ion-social-facebook"></a><a href="#" class="ion-social-twitter"></a></span></div>
+                                <div><p>Дата принятия на работу:</p><span>20.08.2018</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="stat item_grafik" data-item="grafik">
+                    <div class="main-wrapper">
+                        <div class="calendar-wrapper">
+                                <div class="calendar-header">
+                                    <a class="prev-button" id="prev"> <i class="ion-chevron-left"></i> </a>
+                                    <div class="row header-title">
+                                        <div class="header-text">
+                                            <h3 id="month-name">February</h3>
+                                            <h5 id="todayDayName">Today is Friday 7 Feb</h5> </div>
+                                    </div>
+                                    <a class="next-button" id="next"> <i class="ion-chevron-right"></i> </a>
+                                </div>
+                            <div class="calendar-content">
+                                <div id="calendar-table" class="calendar-cells">
+                                    <div id="table-header">
+                                        <div class="row">
+                                            <div class="col day">Пн</div>
+                                            <div class="col day">Вт</div>
+                                            <div class="col day">Ср</div>
+                                            <div class="col day">Чт</div>
+                                            <div class="col day">Пт</div>
+                                            <div class="col day">Сб</div>
+                                            <div class="col day">Вс</div>
+                                        </div>
+                                    </div>
+                                    <div id="table-body" class="">
+                                        <div class="row add_worker">
+                                            <div class="col">dsa <br> dsada <br> dsa sa <br> dsadasdssa</div>
+                                            <div class="col">dsdsadasad</div>
+                                            <div class="col">dsaewq</div>
+                                            <div class="col">dsad</div>
+                                            <div class="col">ewqddsa</div>
+                                            <div class="col">dsa</div>
+                                            <div class="col">weq</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-wrapper" id="sidebar">
+                                <div class="sidebar-title">
+                                    <p id="eventDayName">SIDEBAR SUB-TITLE</p>
+                                </div>
+                                <div class="sidebar-events" id="sidebarEvents">
+                                    <div class="empty-message" data-id="1">
+                                        <div class="side_item"><div class="side_img"><img src="img/example.png" alt=""><span class="ion-close"></span></div><div class="desc"><p>Name</p><span>proffesion</span></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+
+</html>

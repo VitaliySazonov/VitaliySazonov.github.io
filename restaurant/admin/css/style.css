@@ -1,0 +1,1262 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+*, body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Comfortaa', cursive;
+}
+p {
+    color: #ffffff;
+}
+a:hover {
+    cursor: pointer;
+}
+u {
+    text-decoration: underline;
+}
+body {
+    background: url("../img/bg.jpg") no-repeat 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+::-webkit-scrollbar {
+    width: 1px;
+    background: rgba(0,0,0,.8);
+/*    display: none;*/
+}
+::-webkit-scrollbar-track {
+    /*    box-shadow: inset 0 0 5px grey; */
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb {
+    background: greenyellow; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: yellow;
+}
+.wrap {
+    width: 100%;
+    height: auto;
+}
+/*==========================
+=============HEAD===========
+=========================*/
+.head {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 75px;
+/*    width: 260px;*/
+    height: 100%;
+    background: #000;
+    z-index: 2;
+    overflow: hidden;
+    transition: 500ms ease-out;
+    overflow-y: scroll;
+}
+.head::-webkit-scrollbar-thumb {
+    display: none;
+}
+.head:hover {
+    width: 260px;
+}
+.admin {
+    position: relative;
+    z-index: 3;
+}
+.anim {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: greenyellow;
+    animation: anim 1.5s ease infinite;
+    z-index: 2;
+}
+@keyframes anim {
+    to {
+        opacity: 0;
+        transform: scale(1.3);
+        background: greenyellow;
+    }
+}
+/*================================
+=========PANEL WORKERS===========
+===============================*/
+.workers {
+    width: 300px;
+    overflow: hidden;
+}
+.workers h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 100;
+}
+.workers  span {
+    color: steelblue;
+    font-size: 17px;
+}
+.team_search  {
+    color: greenyellow;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.team_search:hover {
+    border: 2px solid;
+}
+.worker, .src {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    background: #000;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+}
+.worker:hover {
+    background: #262626;
+    cursor: pointer;
+}
+.worker.active {
+    background: #262626;
+}
+.worker_avatar {
+    width: 60px;
+    height: 60px;
+    padding: 2px;
+    border-radius: 50%;
+    border: 2px solid deeppink;
+}
+.worker_avatar.online {
+    border: 2px solid greenyellow;
+}
+.worker_avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.worker_content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+.worker_name {
+    font-size: 16px;
+    color: steelblue;
+}
+.worker_position {
+    font-size: 14px;
+    margin-top: 5px;
+    color: deeppink
+}
+.worker_contact {
+    padding: 10px;
+    display: none;
+}
+.worker_contact span {
+    font-size: 24px;
+}
+.worker_contact p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+/*==================================================
+===================TOP PANEL=======================
+=================================================*/
+.menu {
+    position: fixed;
+    top: 0;
+    right: 1px;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+/*    align-items: center;*/
+    z-index: 1;
+}
+.main_menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+}
+.main_menu li {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 0;
+    position: relative;
+    border-radius: 50%;
+}
+.main_menu li span {
+    position: absolute;
+    top: 90%;
+    color: steelblue;
+    font-size: 11px;
+    width: 100%;
+    text-align: center;
+}
+.main_menu li i {
+    position: absolute;
+    right: 50%;
+    color: steelblue;
+    font-size: 13px;
+    opacity: 0;
+}
+.main_menu li:hover p, .main_menu li.active p {
+    cursor: pointer;
+    transition: all .22s ease;
+}
+.main_menu li:hover a p, .main_menu li.active a p, .main_menu li:hover span, .main_menu li.active span {
+    color: steelblue;
+}
+.main_menu li:hover i, .main_menu li.active i {
+    opacity: 1;
+    right: 100%;
+    transition: 200ms ease;
+}
+/*===================================================
+===================SECTION HOME======================
+======panel_top_left========panel_middle_stat=======*/
+.panel {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    overflow-y: scroll;
+    position: relative;
+}
+.panel.active {
+    display: none;
+}
+.panel_middle {
+    height: auto;
+    width: 50%;
+    padding: 0 1px;
+    margin-bottom: 2px;
+    position: fixed;
+    padding-left: 70px;
+}
+.panel_middle h1 {
+    font-size: 40px;
+    color: greenyellow;
+    padding-left: 20px;
+    width: 100%;
+    margin-bottom: 2px;
+}
+.panel_top h1, .notes h1 {
+    color: greenyellow;
+    font-size: 36px;
+    font-weight: 100;
+}
+.panel_top_left {
+    display: grid;
+    grid-template-columns: 14.5% 14.5% 14.5% 14.5% 40%;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2px;
+}
+.panel_top_left li a {
+    font-size: 18px;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.5);
+    color: steelblue;
+}
+.panel_top_left li i {
+    margin-right: 10px;
+}
+.panel_top_left li a.active, .panel_top_left li a:hover {
+    color: greenyellow;
+    background: rgba(0,0,0,.7);
+}
+.panel_middle_stat {
+    display: grid;
+    grid-template-columns: 33.1% 33.1% 33.1%;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    width: 100%;
+}
+.panel_middle_stat li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+/*    margin: 2px;*/
+    padding: 10px;
+    background: rgba(0,0,0,.5);
+}
+.panel_middle_stat li p {
+    font-size: 15px;
+    line-height: 20px;
+}
+.panel_middle_stat li span {
+    font-size: 14px;
+    color: greenyellow;
+}
+.panel_middle_stat li i {
+    font-size: 40px;
+    margin: 0 10px;
+    text-align: center;
+}
+/*==============================================
+====================PANEL_SECOND===============
+====================ТОП ПРОДАЖ=================*/
+.panel_second {
+    margin-bottom: 2px;
+}
+.panel_second_head {
+    display: grid;
+    grid-template-columns: 67% 20% 5%;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    color: steelblue;
+    background: rgba(0,0,0,.6);
+}
+.panel_second_head p {
+    color: deeppink;
+}
+.panel_second_head span {
+    color: greenyellow;
+}
+.panel_second ul {
+    width: 100%;
+    height: 700px;
+/*    position: absolute;*/
+    
+    overflow-y: scroll;
+/*    overflow: hidden;*/
+}
+.panel_second ul li {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70px 60% 18% 10%;
+    align-items: center;
+    padding: 2px 5px;
+    background: rgba(0,0,0, .6);
+}
+.panel_second ul li span {
+    color: deeppink;
+    display: flex;
+    align-items: center;
+}
+.panel_second ul li p {
+    color: greenyellow;
+}
+.panel_second ul li div p {
+    margin-left: 10px;
+    font-size: 14px;
+    color: greenyellow;
+}
+.panel_second ul li div span {
+    color: steelblue;
+    font-size: 20px;
+}
+.panel_second ul li div img {
+    width: 30px;
+    height: 30px;
+}
+.panel_second ul li img {
+    width: 60px;
+    height: 50px;
+    margin: 5px;
+}
+/*=====================================================
+====================Топ продаж кухня/бар===============
+=====================================================*/
+.right_area {
+/*    position: relative;*/
+    padding: 0 1px;
+    transition: all 0.22s ease;
+}
+.stat {
+/*    width: 46%;*/
+    overflow: hidden;
+    transition: all 0.22s ease;
+/*    position: absolute;*/
+    display: none;
+    transform: scale(1.1);
+    opacity: 0;
+    margin-right: 55px;
+}
+.stat.active {
+    opacity: 1;
+    transform: scale(1);
+}
+.stat h2 {
+    font-size: 24px;
+    color: steelblue;
+    padding: 10px;
+    font-weight: 100;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 87% 10%;
+}
+.stat h2 span {
+    color: greenyellow;
+    font-size: 20px;
+}
+.skills {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 2px;
+    background: rgba(0,0,0, .6);
+}
+.skills li {
+    display: grid;
+    grid-template-columns: 50px 180px 60% 10%;
+    align-items: center;
+}
+.skills li img {
+    width: 40px;
+    height: 40px;
+}
+.skills li h3 {
+    width: 20%;
+    font-size: 18px;
+    color: #ddd;
+    font-weight: 100;
+}
+.skills li .bar-container,
+.skills li .bar {
+    height: 5px;
+    border-radius: 5px;
+}
+.skills li .bar-container .bar {
+    background: rebeccapurple;
+    background: purple;
+}
+.skills li .bar-container .pct {
+    display: none;
+}
+.skills li p {
+    padding-left: 20%;
+    padding-right: 20%;
+    color: greenyellow;
+}
+/*==============================================
+====================ITEM_GOODS==================
+===============================================*/
+.item_goods {
+    height: auto;
+/*    background: rgba(0,0,0, .5);*/
+}
+.item_goods .add_goods {
+    color: #fff;
+    margin-bottom: 2px;
+}
+.add_item {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 2px;
+}
+.add_item p {
+    padding: 20px 20px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    background: #000;
+}
+.add_item p.active {
+    color: steelblue;
+}
+.add_item p:hover {
+    background: #262626;
+    cursor: pointer;
+    color: steelblue;
+}
+
+.add_cat {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 2px 0;
+    background: #000;
+    display: none;
+}
+.image-upload-wrap {
+    width: 60px;
+/*    position: absolute;*/
+    height: 60px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-right: 10px;
+    color: lightgrey;
+}
+.image-upload-wrap img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+.file-upload-input, .member_input {
+    display: none;
+}
+.add_cat_name {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.cat_name {
+    background: none;
+    padding: 10px;
+    color: steelblue;
+    border: none;
+    font-size: 20px;
+    outline: none;
+}
+.cat_name::placeholder {
+    color: lightgrey;
+}
+
+.add_tov {
+    background: #000;
+    margin-top: 2px;
+    display: none;
+    padding-bottom: 5px;
+}
+.select_cat {
+    width: 40%;
+    position: relative;
+}
+.cat_result {
+    display: flex;
+    width: 100%;
+}
+.cat_result img {
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+.cat_result input {
+    width: auto;
+    padding: 10px;
+    background: none;
+    color: greenyellow;
+    border: none;
+    outline: none;
+}
+.cat_result input::placeholder {
+    color: #eee;
+}
+.cat_list {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: #000;
+    z-index: 2;
+}
+.cat_list li {
+    display: flex;
+    align-items: center;
+}
+.cat_list li:hover {
+    background: #262626;
+    cursor: pointer;
+}
+.cat_list img {
+    width: 40px;
+    height: 40px;
+}
+
+.tov_name {
+    width: 100%;
+    background: none;
+    padding: 10px;
+    outline: none;
+    border: none;
+    color: steelblue;
+    font-size: 20px;
+}
+.tov_name::placeholder {
+    color: #eee;
+    font-size: 20px;
+}
+
+.tov_images_all {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 5px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.tov_images_all li {
+    width: 100%;
+    position: relative;
+}
+.tov_images_all li img {
+    width: 100px;
+    height: 70px;
+}
+.tov_images_all li span {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    font-size: 20px;
+    color: red;
+}
+.tov_images_all li span:hover {
+    cursor: pointer;
+}
+.add_tov_image {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+}
+.upload_image {
+    display: none;
+}
+.add_tov_image:hover {
+    color: greenyellow;
+    cursor: pointer;
+}
+
+
+
+.tov_cont {
+    width: 100%;
+    height: auto;
+}
+.tov_cont li {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 10px;
+    color: greenyellow;
+}
+.tov_cont li p {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+.tov_cont li p[contenteditable=true]:empty:before {
+    content: attr(placeholder);
+    display: block;
+    color: #aaa;
+}
+.reg_good {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    color: steelblue;
+    padding: 2%;
+    margin: 0 5px;
+    border: 1px solid;
+}
+.reg_good:hover {
+    color: greenyellow;
+}
+.goods_head h1 {
+/*    text-align: center;*/
+    color: greenyellow;
+    font-size: 30px;
+    padding: 20px 0;
+}
+.goods {
+    width: 100%;
+    background: #000;
+}
+.goods_head {
+    padding: 0 20px;
+    background: #000;
+}
+.goods_head .add_category {
+    color: greenyellow;
+    font-size: 30px;
+}
+.add_category:hover {
+    color: steelblue;
+    cursor: pointer;
+}
+.goods_it .part {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+}
+.goods_it .part img {
+    width: 60px;
+}
+.goods_it .part p {
+    color: steelblue;
+    font-size: 20px;
+}
+.goods_it .part:hover {
+    background: rgba(0,0,0, .2);
+}
+.goods_it_name {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: steelblue;
+    font-size: 40px;
+    padding: 10px;
+}
+.goods_it_name.active {
+    background: rgba(0,0,0,.5);
+}
+.goods_it_name p {
+    color: steelblue;
+    font-size: 20px;
+}
+.goods_it_name:hover {
+    background: rgba(0,0,0,.3);
+    cursor: pointer;
+}
+.goods_it_name div i {
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 24px;
+}
+.goods_it_name .edit:hover {
+    color: greenyellow;
+}
+.goods_it_name .close:hover {
+    color: purple;
+}
+.part_img {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5px;
+    
+}
+.part_img img {
+    height: 80px;
+    margin: 5px;
+}
+.part_cont {
+    padding: 10px;
+    
+}
+.part_cont li {
+    margin: 5px 0;
+    display: grid;
+/*    align-items: center;*/
+    grid-template-columns: 35% 70%;
+}
+.part_cont li span {
+    color: greenyellow;
+    font-size: 20px;
+}
+.part_cont li p {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.part_list {
+    display: none;
+/*    display: block;*/
+    
+}
+.content {
+    display: none;
+/*    display: block;*/
+    background: rgba(0,0,0, .3);
+}
+/*==============================================
+====================ITEM_PAGES==================
+===============================================*/
+.item_stat {
+    display: block;
+}
+.item_pages {
+    background: #fff;
+    height: 300px;
+}
+/*==============================================
+===================ADD_TEAM_ITEM================
+===============================================*/
+.add_team_item {
+    position: relative;
+}
+
+.add_team_item_btn {
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    color: steelblue;
+}
+.add_team_item_btn:hover {
+    color: greenyellow;
+    cursor: pointer;
+}
+.add_team_item span {
+    color: #aaa;
+}
+.add_team_item ul {
+    padding: 1%;
+    display: none;
+}
+.add_head {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.add_team_img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid steelblue;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    position: relative;
+    color: #ffffff;
+}
+.img_wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+/*    display: block;*/
+}
+.member_image{
+    width: 100%;
+    height: 100%;
+/*    position: absolute; */
+    display: none;
+}
+.add_head_2 ul {
+    position: absolute;
+    background: #000;
+    left: 13%;
+    padding: 0 1%;
+    display: none;
+}
+.add_head_2 ul li {
+    color: steelblue;
+    margin: 10px 0;
+}
+.add_head_2 ul li:hover {
+    color: deeppink;
+    cursor: pointer;
+}
+.add_head_2 p:empty:before {
+    content: attr(placeholder);
+    display: block;
+    color: #aaa;
+}
+.ai_name {
+    color: steelblue;
+    font-size: 20px;
+}
+.ai_name:hover {
+    cursor: text;
+}
+.ai_pos {
+    color: deeppink
+}
+.ai_pos:hover {
+    cursor: pointer;
+}
+.add_content {
+    padding: 10px;
+    display: flex;
+}
+.add_content span {
+    color: greenyellow;
+    font-weight: 100;
+    width: 40%;
+}
+.add_content p {
+/*    background: #ff2;*/
+    width: 60%;
+    height: 20px;
+}
+.add_content p:empty:before {
+    content: attr(placeholder);
+    display: block;
+    color: #aaa;
+    border-bottom: 1px solid;
+    opacity: .4;
+}
+.add_content p:hover, .add_content p[contenteditable=true]:hover {
+    cursor: text;
+}
+.add_ok {
+    position: absolute;
+    right: 0;
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add_ok:hover {
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+/*==============================================
+====================ITEM_TEAM===================
+===============================================*/
+.item_team {
+    background: rgba(0,0,0,.5);
+}
+.team_ava {
+    display: flex;
+    flex-flow: wrap;
+    align-content: flex-start;
+/*    justify-content: flex-start;*/
+    align-items: center;
+    padding: 10px;
+}
+.team_ava:hover, .team_ava.active {
+    background: rgba(0,0,0,.6);
+    cursor: pointer;
+}
+.team_ava .ava {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid steelblue;
+}
+.team_ava .ava img {
+/*    width: 100%;*/
+    height: 100%;
+}
+.team_name_work {
+    width: 80%;
+}
+.team_ava p {
+    color: steelblue;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.team_ava span {
+    color: deeppink;
+}
+.team_cont {
+    padding: 10px;
+    background: rgba(0,0,0, .6);
+    display: none;
+    width: 100%;
+}
+.team_cont div {
+    display: flex;
+    margin: 10px 0;
+}
+.team_cont p {
+    color: greenyellow;
+    font-size: 18px;
+    width: 35%;
+}
+.team_cont span {
+    color: #ddd;
+    display: flex;
+    align-items: center;
+}
+.team_cont a {
+    font-size: 40px;
+    margin-right: 10px;
+    color: steelblue;
+}
+.team_cont a:hover {
+    color: rebeccapurple;
+}
+.team_cont .off {
+    font-size: 22px
+}
+
+
+
+/*==============================================
+====================ITEM_TEAM===================
+===============================================*/
+
+/*====deeppink=======================================NOTES============================================*/
+
+.notes_main {
+    display: flex;
+    justify-content: space-between;
+}
+.notes_add {
+    width: 70%;
+    height: auto;
+/*    background: rgba(0,0,0,.2);*/
+    display: flex;
+    position: absolute;
+}
+.notes_add_left li {
+    width: 50px;
+    height: 50px;
+    margin: 10px 10px 0 10px;
+}
+.notes_add_left li a {
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.4);
+    box-shadow: 0 0 2px #aaa;
+    border-radius: 2px;
+    color: #fff;
+}
+.notes_cont a {
+    color: darkcyan;
+}
+.notes_add_left li a:hover {
+    box-shadow: 0 1px 1em steelblue;
+    color: steelblue;
+}
+.notes_add_left li a::before {
+    content: attr(data-function);
+    position: absolute;
+    top: -35px;
+    padding: 10px;
+    font-size: 18px;
+    background: #000;
+    z-index: 1000;
+    display: none;
+}
+.notes_add_left li a:hover::before {
+    display: block;
+}
+.notes_add_view {
+    background: rgba(0,0,0, .5);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 3px;
+    height: auto;
+    width: 100%;
+}
+.notes_add_view h1 {
+    margin-top: 10px;
+    font-weight: 300;
+}
+.notes_add_view p {
+    margin: 20px 0 ;
+}
+
+
+
+/*=================================================================
+=======================КАЛЕНДАРЬ-ГРАФИК================================
+=====================================================================*/
+.item_grafik {
+    width: 95%;
+    height: 100vh;
+    padding-right: 55px;
+    background: #000;
+}
+.main-wrapper {
+    width: 100%;
+}
+.calendar-wrapper {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    right: 0;
+    padding-bottom: 30px;
+/*    background: #fff;*/
+}
+.row {
+    display: flex;
+}
+.calendar-header {
+    background-color: rgba(18, 15, 25, 0.25);
+    color: #fff;
+    position: relative;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-title  h3 {
+    font-size: 30px;
+    color: greenyellow;
+}
+.header-title h5 {
+    font-size: 14px;
+    color: steelblue;
+}
+.prev-button, .next-button {
+    cursor: pointer;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    color: greenyellow !important;
+}
+.prev-button i, .next-button i { 
+    font-size: 2em;
+}
+.prev-button:hover, .next-button:hover {
+    color: steelblue!important;
+}
+
+/*===============================================*/
+/*=================SIDE BAR=======================*/
+/*===============================================*/
+.calendar-content {
+    overflow: hidden;
+    width: 100%;
+    color: #fff;
+}
+.sidebar-wrapper {
+    /*    display: none;*/
+    width: 100%;
+    height: auto;
+    padding: 0 5px;
+}
+.sidebar-title {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar-title p {
+    font-size: 20px;
+    color: #fff;
+}
+.sidebar-events {
+    width: 100%;
+    padding: 5px;
+}
+.side_item {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+.side_img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.side_item img {
+    border-radius: 50%;
+    border: 2px solid steelblue;
+    padding: 1px;
+    width: 100%;
+    height: 100%;
+}
+.side_img span {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: red;
+    background: green;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.side_img:hover span {
+    display: flex;
+    cursor: pointer;
+}
+.desc p {
+    margin: 0;
+    font-size: 18px;
+    color: steelblue;
+}
+.desc span {
+    font-size: 16px;
+    color: purple;
+}
+.desc {
+    display: none;
+}
+.side_img:hover .desc {
+    display: block;
+}
+/*===============================================*/
+/*===============================================*/
+/*===============================================*/
+.empty-message {
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+}
+#table-body .col:hover {
+    cursor: pointer;
+    border: 1px solid lightskyblue;
+}
+
+.empty-day:hover {
+    cursor: default !important;
+    background-color: none !important;
+    border: 1px solid transparent!important;
+}
+
+#table-body .col {
+    border: 1px solid transparent;
+}
+
+
+#table-body .row {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#table-body .col, #table-header .col {
+    padding-top: 1.4rem !important;
+    padding-bottom: 1.4rem !important;
+    width: 14.2%;
+}
+
+.col.border {
+    border: 1px solid lightskyblue;
+}
+#calendar-table {
+    text-align: center;
+    padding: 5px;
+}
+
