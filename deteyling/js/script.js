@@ -82,6 +82,7 @@ $(document).ready(function() {
         var container = $(".questions_items li");
         var menu = $('.burger_menu');
         if (!container.is(e.target)){
+            $(".questions_items li").removeClass('active');
             $(".questions_items li").children('p').slideUp();
             $('.questions_items li i').css({transform: 'rotate(0deg)', transition: '.5s'});
         }
