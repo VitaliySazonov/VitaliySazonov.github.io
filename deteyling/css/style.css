@@ -39,6 +39,7 @@ h3 {
     left: 0;
     right: 0;
     z-index: 200;
+    background: #000;
 }
 .top {
     height: 67px;
