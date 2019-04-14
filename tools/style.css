@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+*, body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: #ddd;
+    font-family: 'Comfortaa', cursive;
+}
+.wrap {
+    background: url(./bg-sv.jpg) 100% 100%;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 80%;
+    height: 85%;
+    background: rgba(0, 0, 0, .7);
+    position: relative;
+    display: flex;
+/*    justify-content: center;*/
+    flex-wrap: wrap;
+}
+.left_sec {
+    width: 41%;
+}
+.right_sec {
+    width: 59%;
+    position: relative;
+}
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 6%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.navigation li {
+    margin: 2px 0px;
+    width: 100%;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation li p {
+    transform: rotate(-90deg);
+    display: block;
+    padding: 30px 40px;
+}
+.navigation li:hover {
+    cursor: pointer;
+}
+.navigation li.active p, .navigation li:hover p {
+    color: darkorange;
+}
+.title {
+    margin-top: 4%;
+    width: 96%;
+    text-align: right;
+}
+.title h1 {
+    color: darkorange;
+}
+.title p {
+    color: #ddd
+}
+.ava {
+    width: 35%;
+    height: 90%;
+    position: absolute;
+    left: 6%;
+    top: 12%;
+}
+.ava img {
+    width: 100%;
+    height: 100%;
+}
+.social {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+    height: 15%;
+/*    background: #000;*/
+    position: absolute;
+    right: 0;
+    bottom: 0%;
+}
+.social div {
+    display: flex;
+}
+.social li {
+    margin: 0 10px;
+}
+.social a {
+    font-size: 30px;
+    color: steelblue;
+}
+.social a:hover {
+    color: darkorange;
+}
+.social .download {
+    font-size: 20px;
+}
+.content {
+    position: absolute;
+    width: 100%;
+    height: 85%;
+}
+.item {
+    display: none;
+}
+.item.active {
+/*    display: block;*/
+}
+.info_sec {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    height: 100px;
+}
+.info_sec h2 {
+    color: darkorange;
+    margin-left: 2%;
+    font-size: 28px;
+}
+.info_sec hr {
+    width: 3px;
+/*    margin-left: 2%;*/
+    height: 100%;
+    border: 1px solid steelblue;
+    border-radius: 5px;
+    background: steelblue;
+/*    display: none;*/
+}
+.info_spec {
+    padding: 20px;
+}
+.info_spec ul li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.info_spec ul li span {
+    font-size: 18px;
+    font-weight: 800;
+    color: #aaa;
+}
+.info_spec ul li p {
+    margin-left: 10px;
+    display: block;
+    font-size: 15px;
+}
+.info_spec h3 {
+    color: steelblue;
+    font-size: 23px;
+    margin-top: 10px;
+}
+.info_dop {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    line-height: 1.5em;
+}
+.info_dop span {
+    width: 30%;
+    font-size: 18px;
+    font-weight: 800;
+    color: #aaa;
+}
+.info_dop p {
+    width: 60%;
+}
+.content_text {
+    line-height: 2em;
+    padding: 20px;
+}
+
+/*==================*/
+/*====ITEM_SKILLS===*/
+/*==================*/
+#skills {
+    margin: 3% auto;
+    width: 95%;
+}
+#skills li {
+    position: relative;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.citata {
+    width: 100%;
+    padding: 2%;
+    font-size: 22px;
+    text-align: center;
+}
+.bar_container,
+.bar {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    border-radius: 5px;
+    content: "";
+}
+.ico_skill {
+    height: 20px;
+    width: 5%;
+    font-size: 40px;
+}
+.bar_container {
+    bottom: -8px;
+    width: 100%;
+    background-color: #333;
+    text-align: right;
+}
+.bar {
+    top: 0;
+}
+.pct {
+    position: absolute;
+    top: -19px;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    font-size: 15px;
+}
+/*=========================*/
+/*====portfolio_content===*/
+/*========================*/
+.portfolio_content {
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    overflow-y: scroll;
+}
+.portfolio_content::-webkit-scrollbar {
+    width: .3em;
+}
+.portfolio_content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.portfolio_content::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: darkorange;
+    outline: 1px solid slategrey;
+}
+.portfolio_content div {
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    text-align: center;*/
+    font-size: 18px;
+    
+}
+.portfolio_content div a {
+    color: steelblue;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0px;
+}
+.portfolio_content div a:hover {
+    background: rgba(0,0,0, .5);
+    transition: .3s;
+}
+.portfolio_content div a:hover p {
+    color: darkorange;
+}
+.portfolio_content div a span {
+    width: 25%;
+    display: block;
+    max-height: 20%;
+    padding: 10px;
+}
+.portfolio_content div a p {
+    color: steelblue;
+    margin-left: 10px;
+}
+.portfolio_content div a:hover {
+    color: darkorange;
+}
+.portfolio_content div a span img {
+    margin: auto;
+    display: block;
+    margin-bottom: 10px;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/*=========================*/
+/*====Media_screen===*/
+/*========================*/
+
+
+@media only screen and (max-width: 1680px) {
+    .title h1 {
+        font-size: 25px;
+    }
+    .title p {
+        font-size: 13px;
+    }
+    .ava {
+        top: 13%;
+    }
+    .social li a {
+        font-size: 25px;
+    }
+    .social .download {
+        font-size: 16px;
+    }
+    .info_sec {
+        padding: 15px 0;
+        height: 80px;
+    }
+    .info_sec h2 {
+        font-size: 24px;
+    }
+    .info_spec {
+        padding: 0 15px;
+    }
+    .info_spec ul li span, .info_dop span {
+        font-size: 14px;
+    }
+    .info_spec ul li p {
+        font-size: 12px;
+    }
+    .info_spec h3 {
+        font-size: 18px;
+    }
+    .info_dop {
+        margin: 10px 0px;
+        line-height: 1.5em;
+    }
+    .info_dop p {
+        font-size: 14px;
+    }
+    .content_text {
+        line-height: 1.5em;
+        padding: 10px;
+    }
+    /*==================*/
+    /*====ITEM_SKILLS===*/
+    /*==================*/
+    #skills {
+        margin: 0 auto;
+    }
+    #skills li {
+        margin-bottom: 27px;
+        font-size: 14px
+    }
+    .pct {
+        font-size: 12px;
+    }
+    .citata {
+        padding: 0 10px;
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 1280px) {
+    .left_sec {
+        width: 50%;
+    }
+    .right_sec {
+        width: 50%;
+        position: relative;
+    }
+    .ava {
+        top: 9%;
+        height: 75%;
+        width: 44%;
+        margin-top: 2%;
+    }
+    .info_spec {
+        padding: 20px 15px;
+    }
+    #skills {
+        margin: 20px auto;
+    }
+    #skills li {
+        margin-bottom: 37px;
+        font-size: 14px
+    }
+    .social {
+        width: 190%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    
+    .container {
+        width: 95%;
+    }
+    .left_sec {
+        width: 40%;
+    }
+    .right_sec {
+        width: 60%;
+    }
+    .ava {
+        top: 15%;
+        height: 87%;
+        width: 34%;
+        margin-top: 0%;
+    }
+    .info_sec {
+        padding: 5px 0;
+        height: 60px;
+    }
+    .info_sec h2 {
+        font-size: 20px;
+    }
+    .info_spec {
+        padding: 0 10px;
+    }
+    .info_spec ul li span, .info_dop span {
+        font-size: 11px;
+    }
+    .info_spec ul li p {
+        font-size: 9px;
+    }
+    .info_spec h3 {
+        font-size: 14px;
+    }
+    .info_dop {
+        margin: 5px 0px;
+        line-height: 1.2em;
+    }
+    .info_dop p {
+        font-size: 9px;
+    }
+    .content_text {
+        line-height: 1.5em;
+        padding: 10px;
+        font-size: 10px;
+    }
+    #skills {
+        margin: 20px auto;
+    }
+    #skills li {
+        margin-bottom: 37px;
+        font-size: 14px
+    }
+    .social {
+        width: 100%;
+        height: 10%;
+    }
+    .social li a {
+        font-size: 15px;
+    }
+    .social .download {
+        font-size: 10px;
+    }
+    .navigation li {
+        padding: 20px 10px;
+    }
+    .navigation li p {
+        padding: 20px 20px;
+        font-size: 12px;
+    }
+    /*==================*/
+    /*====ITEM_SKILLS===*/
+    /*==================*/
+    #skills {
+        margin: 0 auto;
+    }
+    #skills li {
+        margin-bottom: 20px;
+        font-size: 9px
+    }
+    .pct {
+        font-size: 7px;
+        top: -14px;
+    }
+    .citata {
+        padding: 0 10px;
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    body {
+        background: #000;
+    }
+    .wrap, .container {
+        background: #000;
+        width: 100%;
+        height: 100vh;
+    }
+    .title {
+        width: 100%;
+        text-align: center;
+    }
+    .item {
+        display: block;
+    }
+    .left_sec, .right_sec, .ava {
+        width: 100%;
+    }
+    .right_sec {
+        margin-top: 100%;
+    }
+    .social {
+        position: absolute;
+        top: -27%;
+        width: 100%;
+        height: 30%;
+    }
+    .ava {
+        left: 0%;
+        top: 10%;
+        height: 60%;
+    }
+    .navigation {
+        display: none;
+    }
+    .item[data-item='skills'], .item[data-item='portfolio'] {
+        display: none;
+    }
+    .portfolio_content {
+        overflow: visible;
+    }
+    .download {
+        display: none;
+    }
+}

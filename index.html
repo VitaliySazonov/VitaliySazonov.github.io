@@ -3,33 +3,152 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Gustos</title>
-    <link rel="icon" href="./img/bootstrap-icon.png">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
-<!--    <link rel="stylesheet" type="text/css" href="css/style.css">-->
+    <title>CV</title>
+    <link rel="icon" href="tools/icon_cv.png">
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="tools/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.bundle.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <style>
-        *, body, html {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            list-style: none;
-
-        }
-    </style>
+    <script src="tools/jquery-3.3.1.min.js"></script>
+    <script src="tools/script.js"></script>
 </head>
 
 <body>
-    
+    <div class="wrap">
+        <div class="container">
+           <div class="left_sec">
+               <ul class="navigation">
+                   <li class="info active"><p>Инфо</p></li>
+                   <li class="skills"><p>Скилл</p></li>
+                   <li class="portfolio"><p>Портфолио</p></li>
+               </ul>
+               <div class="title">
+                   <h1>Сазонов Виталий</h1>
+                   <p>Junior Front-end Developer</p>
+               </div>
+               <div class="ava">
+                   <img src="tools/ava.png" alt="">
+               </div>
+           </div>
+            <div class="right_sec">
+                <ul class="content">
+                    <li class="item " data-item="info">
+                        <div class="info_sec"><hr><h2>Инфо </h2></div>
+                        <div class="info_spec">
+                            <ul>
+                                <li><span>Дата рождения:</span><p>10.04.1990 (29 лет.)</p></li>
+                                <li><span>Город:</span><p>Днепр</p></li>
+                                <li><span>Телефон:</span><p>(063)23-48-124</p></li>
+                            </ul>
+                            <h3>Образование:</h3>
+                            <div  class="info_dop"><span>2017 - 2018г.</span><p><b>КА "ШАГ" </b><br><i>Front-end Developer</i></p></div>
+                            <h3>Иностранные языки:</h3>
+                            <div  class="info_dop"><span>Английский:</span><p><b>Intermediate</b><i>(B1)</i></p></div>
+                            <h3>Опыт работы:</h3>
+                            <div class="info_dop"><span>c 03.2019 - до сегодня: </span><p><b>HTML/CSS верстальщик</b><br>Сайт "Intertool" <br><i>Вёрстка страниц:
+                                Home, Sign In, Sign Up, Error 404, Product etc.</i></p></div>
+                        </div>
+                        <hr style="width: 98%; margin: auto; border: .5px solid steelblue;">
+                        <p class="content_text">Сейчас ищу работу, чтоб понимать в каком направлении развиваться более углублённо.</p>
+                    </li>
+                    <li class="item " data-item="skills">
+                        <div class="info_sec"><hr><h2>Скилл</h2></div>
+                        <ul id="skills">
+                            <li>
+                                HTML5
+                                <div class="bar_container">
+                                    <span class="bar" data-bar='{ "color": "#19f" }'>
+                                        <span class="pct">90%</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                CSS3
+                                <div class="bar_container">
+                                    <span class="bar" data-bar='{ "color": "#27ae60", "delay": 100 }'>
+                                        <span class="pct">90%</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                JS(jQuery) ES5
+                                <div class="bar_container">
+                                    <span class="bar" data-bar='{ "color": "#9b59b6", "delay": 150 }'>
+                                        <span class="pct">50%</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                JS ES6
+                                <div class="bar_container">
+                                    <span class="bar" data-bar='{ "color": "#6b59b6", "delay": 200 }'>
+                                        <span class="pct">30%</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                PHP/MySQL
+                                <div class="bar_container">
+                                    <span class="bar" data-bar='{ "color": "#ae8a33", "delay": 250 }'>
+                                        <span class="pct">20%</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                React.js<br>Redux
+                                <div class="bar_container">
+                                    <span class="bar" data-bar='{ "color": "#ee8a63", "delay": 300 }'>
+                                        <span class="pct">15%</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                Node.js <br>Socket.io
+                                <div class="bar_container">
+                                    <span class="bar" data-bar='{ "color": "#f05351", "delay": 350 }'>
+                                        <span class="pct">25%</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                Photoshop
+                                <div class="bar_container">
+                                    <span class="bar" data-bar='{ "color": "#8f1c6d", "delay": 400 }'>
+                                        <span class="pct">45%</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                Illustrator
+                                <div class="bar_container">
+                                    <span class="bar" data-bar='{ "color": "red", "delay": 450 }'>
+                                        <span class="pct">15%</span>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="citata">Как только ты перестаешь учиться, ты начинаешь умирать. <br> <i>Альберт Эйнштейн</i></p>
+                    </li>
+                    <li class="item " data-item="portfolio">
+                        <div class="info_sec"><hr><h2>Портфолио</h2></div>
+                        <div class="portfolio_content">
+                            <div><a href="https://vitaliysazonov.github.io/deteyling/" target="_blank"><span><img src="./deteyling/img/logo.png" alt=""></span><p>Deteyling</p></a></div>
+                            <div><a href="https://vitaliysazonov.github.io/Mobigeek/" target="_blank"><span><img src="./Mobigeek/img/logo.png" alt=""></span><p>Mobi Geek</p></a></div>
+                            <div><a href="https://vitaliysazonov.github.io/restaurant/" target="_blank"><span><img src="./restaurant/img/night-coffee.png" alt=""></span><p>Moon Cafe</p></a></div>
+                            <div><a href="https://vitaliysazonov.github.io/Gustoso/" target="_blank"><span><img src="./Gustoso/img/phbg.png" alt=""></span><p>Gustoso</p></a></div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="social">
+                   <div>
+                       <li><a class="ion-social-facebook" target="_blank" href="https://www.facebook.com/topvetal"></a></li>
+                       <li><a class="ion-social-github" target="_blank" href="https://github.com/VitaliySazonov"></a></li>
+                       <li><a class="ion-social-linkedin" target="_blank" href="https://www.linkedin.com/in/vitaliy-sazonov-872065182/"></a></li>
+                   </div>
+                    <a class="download" href="https://www.work.ua/jobseeker/my/resumes/5376971.docx">Cкачать резюме .doc</a>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
